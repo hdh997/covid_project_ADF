@@ -1,0 +1,9 @@
+{
+	"name": "covid-rp-adf",
+	"location": "australiasoutheast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e901df16-2220-4757-8607-6540293c4d45",
+		"tenantId": "87289a64-1766-4545-90f0-81b21d8eafd1"
+	}
+}
