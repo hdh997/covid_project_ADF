@@ -756,8 +756,8 @@
 					"recurrence": {
 						"frequency": "Day",
 						"interval": 1,
-						"startTime": "2023-03-11T19:41:00Z",
-						"timeZone": "UTC",
+						"startTime": "2023-03-11T19:43:00",
+						"timeZone": "New Zealand Standard Time",
 						"schedule": {}
 					}
 				}
