@@ -129,17 +129,6 @@
 			}
 		],
 		"concurrency": 1,
-		"parameters": {
-			"sourceRelativeURL": {
-				"type": "string"
-			},
-			"sinkFileName": {
-				"type": "string"
-			},
-			"sourceBaseURL": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"lastPublishTime": "2023-03-09T07:47:35Z"
 	},
