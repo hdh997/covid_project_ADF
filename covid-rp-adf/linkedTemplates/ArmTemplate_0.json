@@ -1209,7 +1209,7 @@
 								"referenceName": "ds_processed_daily_hospital_admission",
 								"type": "DatasetReference"
 							},
-							"name": "SinkDaily"
+							"name": "SinkDailyData"
 						}
 					],
 					"transformations": [
@@ -1350,9 +1350,11 @@
 						"     columnNaming: '$V_$N',",
 						"     lateral: true) ~> PivotDaily",
 						"PivotWeekly sort(desc(rp_year_week, true),",
-						"     asc(country, true)) ~> SortWeekly",
+						"     asc(country, true),",
+						"     partitionBy('hash', 1)) ~> SortWeekly",
 						"PivotDaily sort(desc(rp_date, true),",
-						"     asc(country, true)) ~> SortDaily",
+						"     asc(country, true),",
+						"     partitionBy('hash', 1)) ~> SortDaily",
 						"SortWeekly select(mapColumn(",
 						"          country,",
 						"          country_code_2_digit,",
@@ -1381,20 +1383,24 @@
 						"     skipDuplicateMapOutputs: false) ~> SelectDaily",
 						"SelectWeekly sink(allowSchemaDrift: true,",
 						"     validateSchema: false,",
+						"     partitionFileNames:['Weekly_Hospital_Admissions.csv'],",
 						"     truncate: true,",
 						"     umask: 0022,",
 						"     preCommands: [],",
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
-						"     skipDuplicateMapOutputs: true) ~> SinkWeeklyData",
+						"     skipDuplicateMapOutputs: true,",
+						"     partitionBy('hash', 1)) ~> SinkWeeklyData",
 						"SelectDaily sink(allowSchemaDrift: true,",
 						"     validateSchema: false,",
+						"     partitionFileNames:['Daily_Hospital_Admissions.csv'],",
 						"     truncate: true,",
 						"     umask: 0022,",
 						"     preCommands: [],",
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
-						"     skipDuplicateMapOutputs: true) ~> SinkDaily"
+						"     skipDuplicateMapOutputs: true,",
+						"     partitionBy('hash', 1)) ~> SinkDailyData"
 					]
 				}
 			},

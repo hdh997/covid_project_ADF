@@ -90,7 +90,7 @@
 									"CountryLookUp": {},
 									"DimDateSource": {},
 									"SinkWeeklyData": {},
-									"SinkDaily": {}
+									"SinkDailyData": {}
 								}
 							},
 							"staging": {},
