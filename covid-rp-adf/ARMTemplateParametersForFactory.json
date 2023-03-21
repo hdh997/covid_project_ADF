@@ -11,6 +11,9 @@
 		"ls_azb_covidrpsa_connectionString": {
 			"value": ""
 		},
+		"ls_db_covid_cluster_accessToken": {
+			"value": ""
+		},
 		"ls_adls_covidrpdl_properties_typeProperties_url": {
 			"value": "https://mycovidprojectdl.dfs.core.windows.net/"
 		},
