@@ -31,7 +31,7 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().sourceBaseURL}"
 		},
-		"tr_ingest_population_data_properties_typeProperties_scope": {
+		"tr_population_data_arrived_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/d7bb49bb-452e-4b91-8ec0-afd514969e03/resourceGroups/covid_reporting_rg/providers/Microsoft.Storage/storageAccounts/mycovidprojectsa"
 		},
@@ -98,8 +98,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"tr_ingest_population_data_properties_typeProperties_scope": {
-						"value": "[parameters('tr_ingest_population_data_properties_typeProperties_scope')]"
+					"tr_population_data_arrived_properties_typeProperties_scope": {
+						"value": "[parameters('tr_population_data_arrived_properties_typeProperties_scope')]"
 					}
 				}
 			},
