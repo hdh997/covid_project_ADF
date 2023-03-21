@@ -6,6 +6,9 @@
 			"referenceName": "ls_azb_covidrpsa",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "raw"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

@@ -5,6 +5,9 @@
 			"referenceName": "ls_azb_covidrpsa",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "config"
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
